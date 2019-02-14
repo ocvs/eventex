@@ -30,6 +30,7 @@ def create(request):
                'subscriptions/subscription_email.txt',
                {'subscription': subscription})
 
+    #masked_id = subscription.pk #^ 0xacf3ffdd33
     return HttpResponseRedirect('/inscricao/{}/'.format(subscription.pk))
 
 
@@ -37,9 +38,9 @@ def new(request):
     return render(request, 'subscriptions/subscription_form.html', {'form': SubscriptionForm()})
 
 
-def detail(request, pk):
+def detail(request, masked_id):
     try:
-        subscription = Subscription.objects.get(pk=pk)
+        subscription = Subscription.objects.get(pk=masked_id)
     except Subscription.DoesNotExist:
         raise Http404
     return render(request, 'subscriptions/subscription_detail.html',
