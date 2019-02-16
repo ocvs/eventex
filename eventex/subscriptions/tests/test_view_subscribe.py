@@ -41,9 +41,7 @@ class SubscribeGet(TestCase):
 
 class SubscribePostValid(TestCase):
     def setUp(self):
-        masked_id = 1 ^ 0xacf3ffdd33
-        data = dict(name='Henrique Bastos', cpf='12345678901', email='henrique@bastos.net', phone='21-99618-6180',
-                    masked_id=masked_id)
+        data = dict(name='Henrique Bastos', cpf='12345678901', email='henrique@bastos.net', phone='21-99618-6180')
         self.resp = self.client.post('/inscricao/', data)
 
     def test_post(self):
