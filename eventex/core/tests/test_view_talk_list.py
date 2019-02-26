@@ -26,9 +26,7 @@ class TalkListGet(TestCase):
             (1, '10:00'),
             (1, '13:00'),
             (2, '/palestrantes/henrique-bastos'),
-            (2, 'Descrição da palestra.'),
-            (1, 'Manhã'),
-            (1, 'Tarde'),
+            (2, 'Descrição da palestra'),
         ]
 
         for count, expected in contents:
