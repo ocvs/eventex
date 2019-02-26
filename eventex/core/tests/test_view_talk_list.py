@@ -40,7 +40,7 @@ class TalkListGet(TestCase):
                 self.assertContains(self.resp, expected, count)
 
     def test_context(self):
-        variables = ['morning_talks', 'afternoon_talks', 'courses']
+        variables = ['morning_talks', 'afternoon_talks']
 
         for key in variables:
             with self.subTest():
@@ -53,4 +53,3 @@ class TalkListGetEmpty(TestCase):
 
         self.assertContains(response, 'Ainda não existem palestras de manhã.')
         self.assertContains(response, 'Ainda não existem palestras de tarde.')
-        self.assertContains(response, 'Ainda não existem mini-cursos.')
