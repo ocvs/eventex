@@ -53,4 +53,4 @@ class TalkListGetEmpty(TestCase):
 
         self.assertContains(response, 'Ainda não existem palestras de manhã.')
         self.assertContains(response, 'Ainda não existem palestras de tarde.')
-
+        self.assertContains(response, 'Ainda não existem mini-cursos.')
