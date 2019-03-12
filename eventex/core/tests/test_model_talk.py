@@ -59,8 +59,8 @@ class PeriodManagerTest(TestCase):
         expected = ['Morning Talk']
         self.assertQuerysetEqual(qs, expected, lambda o: o.title)
 
-    def test_at_afternon(self):
-        qs = Talk.objects.at_afternon()
+    def test_at_afternoon(self):
+        qs = Talk.objects.at_afternoon()
         expected = ['Afternon Talk']
         self.assertQuerysetEqual(qs, expected, lambda o: o.title)
 
